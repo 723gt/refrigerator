@@ -4,62 +4,125 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> conisy </title>
+    <title> kondate </title>
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900|Raleway:400,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="../css/index.css">
+    <script src="../js/vue.min.js"></script>
     <script src="../js/jquery-3.2.1.min.js"></script>
   </head>
   <body>
       <div id="header">
           <nav class="navbar navbar-default">
               <div class="container-fluid"> 
-                <a href="../index.html" class="navbar-brand">conisy</a>  
+                <a href="../index.html" class="navbar-brand">kondate</a>  
                       <!-- /.navbar-collapse --> 
               </div>
                     <!-- /.container-fluid --> 
             </nav>
       </div>
       <div class="text-center">
-          <h2>今までの履歴です</h2>
+          <h2>作りたい料理の情報</h2>
           <hr>
       </div>
-      <div class="text-center">
-        <h4>◯月☓日 気温:19℃</h4>
-      </div>
-      <div class="text-center">
+      
+      <div class="container-fluid con" id="scans">
+          <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-lg-offset-5 col-md-offset-5 col-sm-offset-5 col-xs-offset-3 ">
+              <div class="list">
+                <button v-on:click="scan_open" class="btn btn-primary">冷蔵庫の中身</a>
+              </div>
+            </div> 
+           </div>
+        
+        <div class="text-center" v-if="scnacheck">
+            <table class="table">
+                <tr>
+                  <td>合い挽き肉</td>
+                  <td>500g</td>
+                </tr>
+                <tr>
+                  <td>豆腐</td>
+                  <td>1丁</td>
+                </tr>
+                <tr>
+                  <td>卵</td>
+                  <td>5個</td>
+                </tr>
+                <tr>
+                  <td>人参</td>
+                  <td>2本</td>
+                </tr>
+                <tr>
+                  <td>ケチャップ</td>
+                  <td>1本</td>
+                </tr>
+              </table>
+            hoge
+        </div>
+     </div>
+
+      <div class="block-center">
         <table class="table">
-          <tr>
-            <td>トップス</td>
-            <td><img src="../img/tops.jpg" width="100" height="100"></td>
-            <td>ハイネックセーター</td>
+          <tr class="text-center">
+            <td>使いたい食材</td>
+            <td>
+              <select name="mate">
+                <option value="meet">お肉</option>
+                <option value="fish">お魚</option>
+                <option value="veg">お野菜</option>
+                <option value="oth">その他</option>
+              </select>
+            </td>
           </tr>
 
-          <tr>
-            <td>ボトムス</td>
-            <td><img src="../img/bottums.jpg" width="100" height="100"></td>
-            <td>パンツ</td>
+          <tr class="text-center">
+            <td>ジャンル</td>
+            <td>
+              <select name="janl">
+                  <option value="ja">和食</option>
+                  <option value="en">洋食</option>
+                  <option value="ch">中華</option>
+                  <option value="as">アジア・エスニック</option>
+              </select> 
+            </td>           
           </tr>
-        </table>
-      </div>
-      <hr>
-      <div class="text-center">
-        <h4>◯月△日 気温:20℃</h4>
-      </div>
-      <div class="text-center">
-        <table class="table">
-            <tr>
-                <td>トップス</td>
-                <td><img src="../img/tops2.jpg" width="100" height="100"></td>
-                <td>制服</td>
-              </tr>
-              <tr>
-                <td>ボトムス</td>
-                <td><img src="../img/bottums2.jpg" width="100" height="100"></td>
-                <td>ジーンズ</td>
-              </tr>
-        </table>
-      </div>
 
+          <tr class="text-center">
+            <td>カテゴリー</td>
+            <td>
+                <select name="cat">
+                    <option value="main">主菜</option>
+                    <option value="seep">汁物</option>
+                    <option value="noodel">麺類</option>
+                    <option value="as">健康食</option>
+                </select> 
+              </td>                
+          </tr>
+
+          <tr class="text-center">
+              <td>調理時間</td>
+              <td>
+                  <select name="cat">
+                      <option value="15">〜15分</option>
+                      <option value="30">〜30分</option>
+                      <option value="45">〜45分</option>
+                      <option value="1">1時間以上</option>
+                  </select> 
+                </td>                
+            </tr>          
+        </table>
+      </div>
+      <div class="container-fluid con">
+          <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-lg-offset-5 col-md-offset-4 col-sm-offset-4 col-xs-offset-3">
+              <div class="select">
+                <a href="./kondatelist.html" role="button" class="btn btn-primary">レシピを生成する</a>
+              </div>
+            </div> 
+          </div>
+        </div>
+
+    <script src="../js/myvue.js"></script>
   </body>
 </html>
