@@ -62,3 +62,29 @@ var maerbor = new Vue({
         }
     }
 })
+
+var allergy = new Vue({
+    el: '#allergy',
+    data:{
+        allergy: false
+    },
+    methods:{
+        allergy_open: function(){
+            if(this.allergy){this.allergy = false}
+            else{this.allergy = true}
+        }
+    }
+})
+
+var dislike = new Vue({
+    el: '#dislike',
+    data:{
+        dislike: false
+    },
+    methods:{
+        dislike_open: function(){
+            if(this.dislike){ this.dislike = false}
+            else{this.dislike = true}
+        }
+    }
+})
