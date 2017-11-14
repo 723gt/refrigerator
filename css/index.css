@@ -23,3 +23,11 @@ body{
     background-color: #555555;
 }
 
+select{
+    color: #000000;
+}
+
+option{
+    color: #000000;
+}
+

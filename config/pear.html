@@ -9,6 +9,13 @@
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="../css/index.css">
     <script src="../js/jquery-3.2.1.min.js"></script>
+
+    <script>
+      function pearling(){
+        alert("登録完了しました");
+        location.href = "../index.html";
+      }
+    </script>
   </head>
   <body>
       <div id="header">
@@ -24,8 +31,15 @@
           <h2>冷蔵庫とペアリング</h2>
           <hr>
       </div>
-      <div class="text-center">
-        なんかやる
+
+      <div class="container-fluid con">
+        <div class="row">
+          <div class="col-lg-3 col-md-3 col-sm-3 col-lg-offset-5 col-md-offset-5 col-sm-offset-5 col-xs-offset-3 ">
+            <div class="list">
+              <button onclick="pearling()" class="btn btn-primary">近くの冷蔵庫を登録する</button>
+            </div>
+          </div> 
+        </div>
       </div>
 
   </body>

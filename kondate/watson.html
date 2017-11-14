@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> kondate </title>
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900|Raleway:400,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+    <script src="../js/vue.min.js"></script>
+    <script src="../js/jquery-3.2.1.min.js"></script>
+  </head>
+  <body>
+      <div id="header">
+        <nav class="navbar navbar-default">
+        <div class="container-fluid"> 
+            <a href="../index.html" class="navbar-brand">kondate</a>  
+                        <!-- /.navbar-collapse --> 
+          </div>
+                          <!-- /.container-fluid --> 
+        </nav>
+      </div>
+      <div class="text-center">
+          <h2>ワトソンシェフが考えたレシピです</h2>
+          <p class="there">冷蔵庫にある食材</p>
+          <p class="absent">冷蔵庫に食材</p>
+      </div>
+      <div class="text-center">
+        <table class="table">
+          <tr id="soibarg">
+            <td v-on:click="soibarg_open">人参スライスディッシュ</td>
+            <td v-if="soibarg">
+                <table class="table">
+                    <tr class="there">
+                      <td>合い挽き肉</td>
+                      <td>500g</td>
+                    </tr>
+                    <tr class="there">
+                      <td>卵</td>
+                      <td>5個</td>
+                    </tr>
+                    <tr class="there">
+                      <td>人参</td>
+                      <td>2本</td>
+                    </tr>
+                    <tr class="absent">
+                      <td>サラダ油</td>
+                      <td>小さじ1</td>
+                    </tr>
+                    <tr>
+                      <td> <a href="./kondatecleate.html">作り方</a></td>
+                      <td> <a href="https://www.aeonnetshop.com/shop/default.aspx">オンラインで購入</a></td>
+                    </tr>
+                  </table>              
+            </td>
+          </tr>
+        </table>
+      </div>
+      <script src="../js/myvue.js"></script>
+  </body>
+</html>
